@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todos - FocusBoard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>FocusBoard</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="todos.html" class="nav-link active">Todos</a></li>
+                <li><a href="events.html" class="nav-link">Events</a></li>
+                <li><a href="notes.html" class="nav-link">Notes</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+            </div>
+        </nav>
+        
+        <main class="main-content">
+            <header class="page-header">
+                <h1>Todo Management</h1>
+                <button id="addTodoBtn" class="btn btn-primary">+ Add Todo</button>
+                <!-- Toggle Button -->
+                <button id="themeToggle" title="Toggle Theme">🌙</button>
+            </header>
+            
+            <div class="todo-container">
+                <div class="todo-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="pending">Pending</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                </div>
+                
+                <div class="todo-form" id="todoForm" style="display: none;">
+                    <form id="addTodoForm">
+                        <div class="form-row">
+                            <input type="text" id="todoTitle" placeholder="Todo title" required>
+                            <input type="date" id="todoDueDate">
+                            <select id="todoPriority">
+                                <option value="low">Low Priority</option>
+                                <option value="medium" selected>Medium Priority</option>
+                                <option value="high">High Priority</option>
+                            </select>
+                        </div>
+                        <textarea id="todoDescription" placeholder="Description (optional)"></textarea>
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary">Add Todo</button>
+                            <button type="button" id="cancelTodo" class="btn btn-secondary">Cancel</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <div class="todo-list" id="todoList">
+                    <p class="no-items">No todos yet. Click "Add Todo" to get started!</p>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/auth.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

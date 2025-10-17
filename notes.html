@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes - FocusBoard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2>FocusBoard</h2>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="dashboard.html" class="nav-link">Dashboard</a></li>
+                <li><a href="todos.html" class="nav-link">Todos</a></li>
+                <li><a href="events.html" class="nav-link">Events</a></li>
+                <li><a href="notes.html" class="nav-link active">Notes</a></li>
+            </ul>
+            <div class="sidebar-footer">
+                <button id="logoutBtn" class="btn btn-secondary">Logout</button>
+            </div>
+        </nav>
+        
+        <main class="main-content">
+            <header class="page-header">
+                <h1>Notes</h1>
+                <button id="addNoteBtn" class="btn btn-primary">+ Add Note</button>
+                <!-- Toggle Button -->
+                <button id="themeToggle" title="Toggle Theme">🌙</button>
+            </header>
+            
+            <div class="notes-container">
+                <div class="notes-sidebar">
+                    <div class="search-box">
+                        <input type="text" id="noteSearch" placeholder="Search notes...">
+                    </div>
+                    <div class="notes-list" id="notesList">
+                        <p class="no-items">No notes yet. Click "Add Note" to get started!</p>
+                    </div>
+                </div>
+                
+                <div class="note-editor" id="noteEditor" style="display: none;">
+                    <div class="editor-header">
+                        <input type="text" id="noteTitle" placeholder="Note title..." class="note-title-input">
+                        <div class="editor-actions">
+                            <button id="saveNote" class="btn btn-primary">Save</button>
+                            <button id="deleteNote" class="btn btn-danger" style="display: none;">Delete</button>
+                            <button id="closeEditor" class="btn btn-secondary">Close</button>
+                        </div>
+                    </div>
+                    <textarea id="noteContent" placeholder="Start writing your note..." class="note-content-input"></textarea>
+                </div>
+                
+                <div class="welcome-message" id="welcomeMessage">
+                    <h2>Welcome to Notes</h2>
+                    <p>Select a note from the sidebar or create a new one to get started.</p>
+                    <button id="createFirstNote" class="btn btn-primary">Create Your First Note</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="js/auth.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
