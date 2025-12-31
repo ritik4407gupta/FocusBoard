@@ -123,12 +123,9 @@ FocusBoard works in all modern browsers that support localStorage and modern Jav
 
 This project is open source and available under the MIT License.
 
-## Author
-
-Arvind Gupta
-
 ## Acknowledgments
 
 - Built with vanilla HTML, CSS, and JavaScript
 - No external dependencies
+
 - Responsive design using CSS Grid and Flexbox
